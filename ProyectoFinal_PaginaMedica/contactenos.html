@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Sitio de Citas Médicas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener un archivo CSS para los estilos -->
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Tu Sitio de Citas Médicas</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Citas</a></li>
+                <li><a href="#">Médicos</a></li>
+                <li><a href="#">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="consultas">
+        <h2>Solicitar una Consulta</h2>
+        <p>Por favor, complete el formulario a continuación para solicitar una consulta.</p>
+        
+        <form action="procesar_formulario.php" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="region">Región:</label>
+                <select id="region" name="region">
+                    <option value="norte">Norte</option>
+                    <option value="centro">Centro</option>
+                    <option value="sur">Sur</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="area">Área de Consulta:</label>
+                <select id="area" name="area">
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="pediatria">Pediatría</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <!-- Otras secciones de tu página web -->
+    
+    <footer>
+        <p>Derechos de autor © 2023 Tu Sitio de Citas Médicas</p>
+    </footer>
+</body>
+</html>

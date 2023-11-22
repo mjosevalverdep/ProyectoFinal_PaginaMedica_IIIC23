@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Citas Médicas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Citas Médicas</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Citas Disponibles</a></li>
+            <li><a href="#">Mi Cuenta</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <div id="contenido">
+        <h2>Reservar una Cita Médica</h2>
+        <form>
+            <!-- Formulario de inicio de sesión (como se mostró anteriormente) -->
+            
+            <!-- Sección para reservar citas -->
+            <div id="reservar-cita">
+                <h2>Referencia</h2>
+                <form>
+                    <label for="especialidad">Especialidad:</label>
+                    <select id="especialidad" name="especialidad" required>
+                        <option value="cardiologia">Cardiología</option>
+                        <option value="dermatologia">Dermatología</option>
+                        <option value="pediatria">Pediatría</option>
+                        <option value="gastroenterologia">Gastroenterología</option>
+                        <option value="oftalmologia">Oftalmología</option>
+                        <option value="urologia">Urología</option>
+                        <option value="endocrinologia">Endocrinología</option>
+                        <option value="neurologia">Neurología</option>
+                        <!-- Agrega más opciones de especialidad si es necesario -->
+                    </select>
+                    <label for="fecha-cita">Fecha de la Cita:</label>
+                    <input type="date" id="fecha-cita" name="fecha-cita" required>
+                    <label for="hora-cita">Hora de la Cita:</label>
+                    <input type="time" id="hora-cita" name="hora-cita" required>
+                    
+                    <!-- Sección de detalles -->
+                    <h2>Detalles</h2>
+                    <div class="form-group">
+                        <label for="medico-preferencia">Médico de Preferencia:</label>
+                        <input type="text" id="medico-preferencia" name="medico-preferencia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre-paciente">Nombre del Paciente:</label>
+                        <input type="text" id="nombre-paciente" name="nombre-paciente" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="domicilio">Domicilio:</label>
+                        <input type="text" id="domicilio" name="domicilio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visita">¿Desea la visita en casa o en la clínica?:</label>
+                        <select id="visita" name="visita" required>
+                            <option value="casa">En Casa</option>
+                            <option value="clinica">En Clínica</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Número de Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    <button type="submit">Reservar Cita</button>
+                </form>
+            </div>
+        </form>
+    </div>
+
+    <section id="redes-sociales">
+        <h2>Síganos en las Redes Sociales</h2>
+        <ul>
+            <li><a href="#"><img src="imagenes\face.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="imagenes\twit.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="imagenes\insta.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="imagenes\whats.png" alt="WhatsApp"></a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2023 Citas Médicas</p>
+    </footer>
+</body>
+</html>
