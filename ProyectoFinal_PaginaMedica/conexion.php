@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Registro exitoso
         $mensaje = "¡Registro exitoso!";
         // Redireccionamiento a login.html después de 3 segundos
-        header("refresh:3;url=login.html");
+        header("refresh:3;url=loginUsuarios.html");
     } else {
         // Error en el registro
         $mensaje = "Error en el registro: " . $stmt->error;
