@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <title>Citas Médicas</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinica a su alcance</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Citas Médicas</h1>
+        <h1>Clinica a su alcance</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Citas Disponibles</a></li>
-            <li><a href="#">Mi Cuenta</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="ReservaCitas.html">Citas Disponibles</a></li>
+            <li><a href="logIN.html">Mi Cuenta</a></li>
+            <li><a href="contactenos.html">Contacto</a></li>
         </ul>
     </nav>
     <div id="contenido">
@@ -40,7 +46,7 @@
             <!-- Cuadro de registro -->
             <div class="formulario-box" id="registro-section">
                 <h2>Registrarse</h2>
-                <form>
+                <form action="conexion.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -66,18 +72,26 @@
             </div>
         </form>
     </div>
-
-    <section id="redes-sociales">
-        <h2>Síganos en las Redes Sociales</h2>
-        <ul>
-            <li><a href="#"><img src="imagenes\face.png" alt="Facebook"></a></li>
-            <li><a href="#"><img src="imagenes\twit.png" alt="Twitter"></a></li>
-            <li><a href="#"><img src="imagenes\insta.png" alt="Instagram"></a></li>
-            <li><a href="#"><img src="imagenes\whats.png" alt="WhatsApp"></a></li>
-        </ul>
-    </section>
     <footer>
-        <p>&copy; 2023 Citas Médicas</p>
+        <div class="footer">
+
+
+            <section id="redes-sociales">
+                <h2>Síganos en las Redes Sociales</h2>
+                <ul>
+                    <li><a href="#"><img src="face.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="twit.png" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="insta.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="whats.png" alt="WhatsApp"></a></li>
+                </ul>
+            </section>
+            <p>Sitio desarrollado con fines educativos, Universidad Fidelitas 2023</p>
+            <p>&copy; 2023 Citas Médicas</p>
+        </div>
     </footer>
 </body>
+
+</html>
+</body>
+
 </html>
