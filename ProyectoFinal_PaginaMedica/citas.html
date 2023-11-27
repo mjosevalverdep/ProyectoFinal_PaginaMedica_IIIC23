@@ -108,7 +108,33 @@
   <footer>
     <p>&copy; 2023 Citas Médicas</p>
   </footer>
+  <script>
+    document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+        // Validación del nombre
+        var fullName = document.getElementById('fullName').value;
+        if (!fullName.trim()) {
+            alert('Por favor, ingrese su nombre completo.');
+            event.preventDefault();
+            return;
+        }
 
+        // Validación del correo electrónico
+        var email = document.getElementById('email').value;
+        if (!isValidEmail(email)) {
+            alert('Por favor, ingrese una dirección de correo electrónico válida.');
+            event.preventDefault();
+            return;
+        }
+
+        // Validación del número de teléfono
+        var phone = document.getElementById('phone').value;
+        if (!isValidPhone(phone)) {
+            alert('Por favor, ingrese un número de teléfono válido.');
+            event.preventDefault();
+            return;
+        }
+    });
+</script>
 </body>
 
 </html>
