@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicaASuAlcance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- Enlace al archivo script.js -->
+  <script src="script.js" defer></script>
+</head>
+ 
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="ClinicaASA">
+            </div>
+            <ul class="menu">
+            <nav>
+            <li><a href="index.html">Inicio</a></li>
+        <li><a href="ReservaCitas.html">Citas Disponibles</a></li>
+        <li><a href="logIN.html">Mi Cuenta</a></li>
+        <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+</nav>
+</header>
+
+<section>
+    <div class="login-page bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                  <h3 class="mb-3">Registro de Usuario</h3>
+                    <div class="bg-white shadow rounded">
+                        <div class="row">
+                            <div class="col-md-7 pe-0">
+                            
+                                <div class="form-left h-100 py-5 px-5">
+                                    
+                                    <form action="conexion.php" method="post" class="row g-4">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="text" id="nombre" name="nombre " class="form-control" placeholder="Ingrese su nombre" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="text" id="correo-registro" name="correo-registro" class="form-control" placeholder="Correo electronico" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" id="usuario-registro" name="usuario-registro" class="form-control" placeholder="Ingrese Username" required>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="password"  id="contrasena-registro" name="contrasena-registro" class="form-control" placeholder="Ingrese contraseña" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                               
+                                                <button type="submit" class="btn btn-primary px-4 float-end mt-4">Registrar</button>
+                                            </div>
+                                    </form>
+                                </div>
+
+                               
+                            </div>
+                            <div class="col-md-5 ps-0 d-none d-md-block">
+                                <div class="form-right h-100 bg-primary text-white text-center pt-5">
+                                    <h2 class="fs-1">Bienvenido</h2>
+                                    <p> Ingersa los datos en el formualrio para crear tu cuenta</p>
+                                    <div class="logo">
+                                        <img src="images/logo.png" alt="ClinicaASA">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+           
+<section id="redes-sociales">
+    <h2>Síganos en las Redes Sociales</h2>
+    <ul>
+        <li><a href="#"><img src="images\face.png" alt="Facebook"></a></li>
+        <li><a href="#"><img src="images\twit.png" alt="Twitter"></a></li>
+        <li><a href="#"><img src="images\insta.png" alt="Instagram"></a></li>
+        <li><a href="#"><img src="images\whats.png" alt="WhatsApp"></a></li>
+    </ul>
+</section>
+</div>
+<footer>
+<p>&copy; 2023 Citas Médicas</p>
+</footer>
+</body>
+</html>

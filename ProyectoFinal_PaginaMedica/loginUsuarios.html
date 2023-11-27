@@ -1,97 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head> 
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Clinica a su alcance</title>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>ClinicaASuAlcance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Clinica a su alcance</h1>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="ClinicaASA">
+            </div>
+            <ul class="menu">
+                <nav>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ReservaCitas.html">Citas Disponibles</a></li>
+                    <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
+                    <li><a href="contactenos.html">Contacto</a></li>
+            </ul>
+        </nav>
+        </nav>
     </header>
-    <nav>
+
+    <section>
+        <div class="login-page bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <h3 class="mb-3">Inicio de sesion</h3>
+                        <div class="bg-white shadow rounded">
+                            <div class="row">
+                                <div class="col-md-7 pe-0">
+                                    <div class="form-left h-100 py-5 px-5">
+                                        <form action="" class="row g-4">
+                                            <div class="col-12">
+                                                <label>Username<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Ingrese Username">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label>Password<span class="text-danger">*</span></label>
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="password" class="form-control"
+                                                        placeholder="Ingrese Password">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit"
+                                                    class="btn btn-primary px-4 float-end mt-4">Ingresar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 ps-0 d-none d-md-block">
+                                    <div class="form-right h-100 bg-primary text-white text-center pt-5">
+                                        <h2 class="fs-1">Bienvenido</h2>
+                                        <p> Inicia sesion con tus datos de usaurio, si no tienes una cuenta haz click en
+                                            el enlace de abajo para craerla</p>
+                                        <a  class="btn btn-dark" href="crear_cuenta.html" role="button">Crear cuenta </a>                                        </button>
+                                        <div class="logo">
+                                            <img src="images/logo.png" alt="ClinicaASA">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="redes-sociales">
+        <h2>Síganos en las Redes Sociales</h2>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="ReservaCitas.html">Citas Disponibles</a></li>
-            <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
-            <li><a href="contactenos.html">Contacto</a></li>
+            <li><a href="#"><img src="images\face.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images\twit.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="images\insta.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images\whats.png" alt="WhatsApp"></a></li>
         </ul>
-    </nav>
-    <div id="contenido">
-        <h2>Reservar una Cita Médica</h2>
-        <form>
-            <!-- Formulario de reserva de citas (como se mostró anteriormente) -->
-
-            <!-- Cuadro de inicio de sesión -->
-            <div class="formulario-box" id="login-section">
-                <h2>Iniciar Sesión</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="usuario">Usuario:</label>
-                        <input type="text" id="usuario" name="usuario" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contrasena">Contraseña:</label>
-                        <input type="password" id="contrasena" name="contrasena" required>
-                    </div>
-                    <input type="submit" value="Iniciar Sesión">
-                </form>
-            </div>
-
-            <!-- Cuadro de registro -->
-            <div class="formulario-box" id="registro-section">
-                <h2>Registrarse</h2>
-                <form action="conexion.php" method="post">
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="correo-registro">Correo Electrónico:</label>
-                        <input type="email" id="correo-registro" name="correo-registro" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="usuario-registro">Usuario:</label>
-                        <input type="text" id="usuario-registro" name="usuario-registro" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contrasena-registro">Contraseña:</label>
-                        <input type="password" id="contrasena-registro" name="contrasena-registro" required>
-                    </div>
-                    <input type="submit" value="Registrarse">
-                </form>
-            </div>
-        </form>
+    </section>
     </div>
     <footer>
-        <div class="footer">
-
-
-            <section id="redes-sociales">
-                <h2>Síganos en las Redes Sociales</h2>
-                <ul>
-                    <li><a href="#"><img src="face.png" alt="Facebook"></a></li>
-                    <li><a href="#"><img src="twit.png" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="insta.png" alt="Instagram"></a></li>
-                    <li><a href="#"><img src="whats.png" alt="WhatsApp"></a></li>
-                </ul>
-            </section>
-            <p>Sitio desarrollado con fines educativos, Universidad Fidelitas 2023</p>
-            <p>&copy; 2023 Citas Médicas</p>
-        </div>
+        <p>&copy; 2023 Citas Médicas</p>
     </footer>
-</body>
-
-</html>
 </body>
 
 </html>

@@ -1,56 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+ 
 <head>
-    <title>Citas Médicas</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicaASuAlcance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
+ 
 <body>
     <header>
-        <h1>Citas Médicas</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Citas Disponibles</a></li>
-            <li><a href="#">Mi Cuenta</a></li>
-            <li><a href="#">Contacto</a></li>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="ClinicaASA">
+            </div>
+            <ul class="menu">
+            <nav>
+            <li><a href="index.html">Inicio</a></li>
+        <li><a href="ReservaCitas.html">Citas Disponibles</a></li>
+        <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
+        <li><a href="contactenos.html">Contacto</a></li>
         </ul>
     </nav>
+        </nav>
+    </header>
     <div id="contenido">
-        <section id="home">
-            <h2>Bienvenido a Citas Médicas</h2>
-            <p>Su salud es nuestra prioridad. En Citas Médicas, le ofrecemos un servicio de reserva de citas médicas rápido y sencillo. Regístrese y reserve su cita hoy mismo.</p>
-            <a href="#">Reservar una Cita</a>
-        </section>
-        <section id="galeria">
-            <h2>Galería de Imágenes</h2>
-            <div class="imagen"><img src="Cli1.png" alt="Imagen 1"></div>
-            <div class="imagen"><img src="Cli2.png" alt="Imagen 2"></div>
-            <div class="imagen"><img src="Cli3.png" alt="Imagen 3"></div>
-            <div class="imagen"><img src="Cli4.png" alt="Imagen 4"></div>
-            <div class="imagen"><img src="Cli5.png" alt="Imagen 5"></div>
-            <div class="imagen"><img src="Cli6.png" alt="Imagen 6"></div>
-        </section>
-        <section id="medicos-reconocidos">
-            <h2>Médicos Reconocidos</h2>
+    <section class="slide">
+        <div class="slide-content">
+        <h1>Bienvenido a Clinica a su alcance</h1>
+        <p>Su salud es nuestra prioridad. En Clinica a su alcance, le ofrecemos un servicio de reserva de citas médicas rápido y sencillo. </p>
+        <a href="#" class="btn-reservar">Reservar una Cita</a>
+        </div>
+    </section>
+    <div class="titulo">
+    <h2>Médicos Reconocidos</h2>
+    <p>En nuestra clinica contamos con la atencion de reoncidos médicos del país </p>
+</div>
+    <section id="medicos-reconocidos">
+            
             <div class="medico">
-                <img src="DOC1.png" alt="Dr. Juan Pérez">
+
+                <img src="images\DOC1.png" alt="Dr. Juan Pérez">
                 <h3>Dr. Juan Pérez</h3>
                 <p>Especialista en Cardiología</p>
             </div>
             <div class="medico">
-                <img src="DOC2.png" alt="Dra. María López">
-                <h3>Dra. María López</h3>
+                <img src="images\DOC2.png" alt="Dr. Mario López">
+                <h3>Dr. Mario López</h3>
+                <p>Especialista </p>
+            </div>
+            <div class="medico">
+                <img src="images\DOC3.png" alt="Dr. Mario López">
+                <h3>Dra. Pedro Garcia</h3>
                 <p>Especialista en Dermatología</p>
             </div>
-        </section>   
-        <section id="redes-sociales">
+            <div class="medico">
+                <img src="images\DOC4.png" alt="Dr. Mario López">
+                <h3>Dra. Jorge Ulate</h3>
+                <p>Especialista en </p>
+            </div>
+        </section>
+
+        <div class="titulo">
+    <h2>Donde estámos ubicados</h2>
+    <p>Nuestra clinica está ubicada en una ubicación privilegiada </p>
+
+</div>
+        <section id="mapa"> 
+            <div class="mapa-info">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d413.0909884346169!2d-84.0773434058866!3d9.933462568455964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1700710278551!5m2!1ses-419!2scr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<p>Estamos ubicados en el centro de San José,por lo que es de facil accesibilidad que usted acuda a nuestras instalaciones </p>
+</div></section>
+        
+<section id="redes-sociales">
             <h2>Síganos en las Redes Sociales</h2>
             <ul>
-                <li><a href="#"><img src="face.png" alt="Facebook"></a></li>
-                <li><a href="#"><img src="twit.png" alt="Twitter"></a></li>
-                <li><a href="#"><img src="insta.png" alt="Instagram"></a></li>
-                <li><a href="#"><img src="whats.png" alt="WhatsApp"></a></li>
+                <li><a href="#"><img src="images\face.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images\twit.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images\insta.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="images\whats.png" alt="WhatsApp"></a></li>
             </ul>
         </section>
     </div>

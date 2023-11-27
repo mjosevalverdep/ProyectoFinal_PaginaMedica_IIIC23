@@ -1,67 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Sitio de Citas Médicas</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <title>ClinicaASuAlcance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/script.js"></script>
 </head>
+
 <body>
     <header>
-        <h1>Bienvenido a Tu Sitio de Citas Médicas</h1>
         <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Citas</a></li>
-                <li><a href="#">Médicos</a></li>
-                <li><a href="#">Contáctenos</a></li>
+            <div class="logo">
+                <img src="images/logo.png" alt="ClinicaASA">
+            </div>
+            <ul class="menu">
+                <nav>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ReservaCitas.html">Citas Disponibles</a></li>
+                    <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
+                    <li><a href="contactenos.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <br>
+<section>
     
-    <section id="consultas">
-        <h2>Solicitar una Consulta</h2>
-        <p>Por favor, complete el formulario a continuación para solicitar una consulta.</p>
-        
-        <form action="procesar_formulario.php" method="post">
+   <div class="container bootstrap snippets bootdeys">
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="contact-detail-box">
+            <i class="fa fa-th fa-3x text-colored"></i>
+            <h4>Llamanos al</h4>
+            <abbr title="Phone">T:</abbr> (506) 2222-4578<br>
+            E: <a href="mailto:email@email.com" class="text-muted">contacto@clinicaasa.cr</a>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="contact-detail-box">
+            <i class="fa fa-map-marker fa-3x text-colored"></i>
+            <h4>Nuestra ubicacion</h4>
+
+            <address>
+            San Jose, Costa Rica<br>
+            Avenida Central<br>
+          </address>
+          </div>
+        </div><!-- end col -->
+
+        <div class="col-sm-4">
+          <div class="contact-detail-box">
+            <i class="fa fa-book fa-3x text-colored"></i>
+            <h4>24x7</h4>
+
+            <p>Puede escribirnos al whatsapp</p>
+            <h4 class="text-muted"> 2222-4578</h4>
+          </div>
+        </div><!-- end col -->
+
+      </div>
+      <!-- end row -->
+
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d413.0909884346169!2d-84.0773434058866!3d9.933462568455964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1700710278551!5m2!1ses-419!2scr"frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 100%; height: 360px;"></iframe>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="col-sm-6">
+          <form role="form" name="ajax-form" id="ajax-form" action="" method="post" class="form-main">
+
             <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            
+              <label for="nombre2">Nombre</label>
+              <input class="form-control" id="nombre2" name="nombre">
+              <div class="error" id="err-name" style="display: none;">Favor ingrese su nombre</div>
+            </div> 
+
             <div class="form-group">
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" required>
-            </div>
-            
+              <label for="email2">Email</label>
+              <input class="form-control" id="email2" name="email" type="text">
+              <div class="error" id="err-emailvld" style="display: none;">E-mail formato invalido</div> 
+            </div> 
+
             <div class="form-group">
-                <label for="region">Región:</label>
-                <select id="region" name="region">
-                    <option value="norte">Norte</option>
-                    <option value="centro">Centro</option>
-                    <option value="sur">Sur</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="area">Área de Consulta:</label>
-                <select id="area" name="area">
-                    <option value="cardiologia">Cardiología</option>
-                    <option value="dermatologia">Dermatología</option>
-                    <option value="pediatria">Pediatría</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-            </div>
-            
-            <button type="submit">Enviar</button>
-        </form>
+              <label for="message2">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
+
+              <div class="error" id="err-message" style="display: none;">Please enter message</div>
+            </div> 
+
+            <div class="row">            
+                <button type="submit" class="btn btn-primary px-4 float-end mt-4" id="send">Enviar consulta</button>
+              </div> 
+            </div> 
+
+          </form>
+        </div>
+
+      </div> 
+          
+    </div>
+</section>
+
+
+    <section id="redes-sociales">
+        <h2>Síganos en las Redes Sociales</h2>
+        <ul>
+            <li><a href="#"><img src="images\face.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images\twit.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="images\insta.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="images\whats.png" alt="WhatsApp"></a></li>
+        </ul>
     </section>
+    </div>
     <footer>
-        <p>Derechos de autor © 2023 Tu Sitio de Citas Médicas</p>
+        <p>&copy; 2023 Citas Médicas</p>
     </footer>
 </body>
+
 </html>
