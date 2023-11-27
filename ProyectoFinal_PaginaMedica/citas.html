@@ -7,8 +7,8 @@
   <title>ClinicaASuAlcance</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +24,7 @@
           <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
           <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
           <li><a href="contactenos.html">Contacto</a></li>
+        </nav>
       </ul>
     </nav>
   </header>
@@ -34,22 +35,25 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <h3 class="mb-3">Reservar Cita</h3>
-            <form id="appointmentForm">
+            <form id="appointmentForm" method="POST" action="procesar_cita.php">
               <div class="mb-3">
                 <label for="fullName" class="form-label">Nombre Completo</label>
-                <input type="text" id="fullName" class="form-control" placeholder="Ingrese su nombre completo">
+                <input type="text" id="fullName" name="nombre_completo" class="form-control"
+                  placeholder="Ingrese su nombre completo" required>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Correo Electrónico</label>
-                <input type="email" id="email" class="form-control" placeholder="Ingrese su correo electrónico">
+                <input type="email" id="email" name="correo_electronico" class="form-control"
+                  placeholder="Ingrese su correo electrónico" required>
               </div>
               <div class="mb-3">
                 <label for="phone" class="form-label">Número de Teléfono</label>
-                <input type="tel" id="phone" class="form-control" placeholder="Ingrese su número de teléfono">
+                <input type="tel" id="phone" name="numero_telefono" class="form-control"
+                  placeholder="Ingrese su número de teléfono" required>
               </div>
               <div class="mb-3">
                 <label for="specialty" class="form-label">Especialidad Médica</label>
-                <select id="specialty" class="form-select">
+                <select id="specialty" name="especialidad_medica" class="form-select" required>
                   <option value="cardiology">Cardiología</option>
                   <option value="dermatology">Dermatología</option>
                   <option value="orthopedics">Ortopedia</option>
@@ -59,11 +63,11 @@
               </div>
               <div class="mb-3">
                 <label for="preferredDate" class="form-label">Fecha Preferida</label>
-                <input type="date" id="preferredDate" class="form-control">
+                <input type="date" id="preferredDate" name="fecha_preferida" class="form-control" required>
               </div>
               <div class="mb-3">
                 <label for="preferredTime" class="form-label">Hora Preferida</label>
-                <input type="time" id="preferredTime" class="form-control">
+                <input type="time" id="preferredTime" name="hora_preferida" class="form-control" required>
               </div>
               <button type="submit" class="btn btn-primary btn-lg">Reservar Cita</button>
             </form>
@@ -79,62 +83,34 @@
   <section id="redes-sociales" class="bg-dark p-4">
     <h2 class="text-center mb-4">Síganos en las Redes Sociales</h2>
     <div class="d-flex justify-content-center">
-        <ul class="list-inline">
-            <li class="list-inline-item mr-3">
-                <a href="https://www.facebook.com/" class="text-dark" target="_blank">
-                    <img src="images\face.png" alt="Facebook" class="img-fluid">
-                </a>
-            </li>
-            <li class="list-inline-item mr-3">
-                <a href="https://twitter.com/" class="text-dark" target="_blank">
-                    <img src="images\twit.png" alt="Twitter" class="img-fluid">
-                </a>
-            </li>
-            <li class="list-inline-item mr-3">
-                <a href="https://www.instagram.com/" class="text-dark" target="_blank">
-                    <img src="images\insta.png" alt="Instagram" class="img-fluid">
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://web.whatsapp.com/" class="text-dark" target="_blank">
-                    <img src="images\whats.png" alt="WhatsApp" class="img-fluid">
-                </a>
-            </li>
-        </ul>
+      <ul class="list-inline">
+        <li class="list-inline-item mr-3">
+          <a href="https://www.facebook.com/" class="text-dark" target="_blank">
+            <img src="images\face.png" alt="Facebook" class="img-fluid">
+          </a>
+        </li>
+        <li class="list-inline-item mr-3">
+          <a href="https://twitter.com/" class="text-dark" target="_blank">
+            <img src="images\twit.png" alt="Twitter" class="img-fluid">
+          </a>
+        </li>
+        <li class="list-inline-item mr-3">
+          <a href="https://www.instagram.com/" class="text-dark" target="_blank">
+            <img src="images\insta.png" alt="Instagram" class="img-fluid">
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://web.whatsapp.com/" class="text-dark" target="_blank">
+            <img src="images\whats.png" alt="WhatsApp" class="img-fluid">
+          </a>
+        </li>
+      </ul>
     </div>
-</section>
-
+  </section>
 
   <footer>
     <p>&copy; 2023 Citas Médicas</p>
   </footer>
-  <script>
-    document.getElementById('appointmentForm').addEventListener('submit', function (event) {
-        // Validación del nombre
-        var fullName = document.getElementById('fullName').value;
-        if (!fullName.trim()) {
-            alert('Por favor, ingrese su nombre completo.');
-            event.preventDefault();
-            return;
-        }
-
-        // Validación del correo electrónico
-        var email = document.getElementById('email').value;
-        if (!isValidEmail(email)) {
-            alert('Por favor, ingrese una dirección de correo electrónico válida.');
-            event.preventDefault();
-            return;
-        }
-
-        // Validación del número de teléfono
-        var phone = document.getElementById('phone').value;
-        if (!isValidPhone(phone)) {
-            alert('Por favor, ingrese un número de teléfono válido.');
-            event.preventDefault();
-            return;
-        }
-    });
-</script>
 </body>
 
 </html>
