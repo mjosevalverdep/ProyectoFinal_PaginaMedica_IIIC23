@@ -14,7 +14,7 @@ contraseña VARCHAR(255) NOT NULL
 );
 
 
-CREATE TABLE citas (
+CREATE TABLE IF NOT EXISTS citas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre_completo VARCHAR(255) NOT NULL,
     correo_electronico VARCHAR(255) NOT NULL,
