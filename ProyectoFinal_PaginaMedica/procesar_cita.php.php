@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hora_preferida = $_POST['hora_preferida'];
 
     // Insertar los datos en la base de datos
-    $sql = "INSERT INTO citas_medicas (nombre_completo, correo_electronico, numero_telefono, especialidad_medica, fecha_preferida, hora_preferida) VALUES ('$nombre_completo', '$correo_electronico', '$numero_telefono', '$especialidad_medica', '$fecha_preferida', '$hora_preferida')";
+    $sql = "INSERT INTO citas (nombre_completo, correo_electronico, numero_telefono, especialidad_medica, fecha_preferida, hora_preferida) VALUES ('$nombre_completo', '$correo_electronico', '$numero_telefono', '$especialidad_medica', '$fecha_preferida', '$hora_preferida')";
 
     if ($conn->query($sql) === TRUE) {
         echo json_encode(['success' => true, 'message' => 'La cita se ha reservado con éxito']);
