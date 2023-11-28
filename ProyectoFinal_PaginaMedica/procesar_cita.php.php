@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $servidor = "localhost";
     $usuario = "Proyecto"; 
     $contrasena = "Proyecto"; 
-    $base_de_datos = "citas"; 
+    $base_de_datos = "usuarios"; 
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
