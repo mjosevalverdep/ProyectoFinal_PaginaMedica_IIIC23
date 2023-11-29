@@ -42,70 +42,115 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $conn->close();
 
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
- 
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Usuarios </title>
+  <title>Admin - Crear usaurios </title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/adminUsuarios.css">
 
 </head>
 
+ 
 <body>
-<header>
-    <nav>
-      <div class="logo">
-        <img src="images/logo.png" alt="ClinicaASA">
-      </div>
-      <ul class="menu">
+    <header>
         <nav>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="citas.html">Agendar Citas</a></li>
-          <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
-          <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
-          <li><a href="contactenos.html">Contacto</a></li>
-        </nav>
-      </ul>
+            <div class="logo">
+                <img src="images/logo.png" alt="ClinicaASA">
+            </div>
+            <ul class="menu">
+            <nav>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="citas.html">Agendar Citas</a></li>
+                <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
+                <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
+                <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
     </nav>
-  </header>
-  <div id="contenido">
-    <div class="admin-usuarios">
-      <h1>Administración de usuarios</h1>
-      <div>
+        </nav>
+        </header>
+        
+        <section>
+        <div class="login-page bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <h3 class="mb-3">Registrar de Usuarios</h3>
+                        <div>
         <button onclick="location.href='adminUsuarios.php'">Volver</button>
       </div>
     </div>
-    <form method="post" action="adminCrearUsuario.php">
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required>
-      </div>
-      <div class="form-group">
-        <label for="correo-registro">Correo Electrónico:</label>
-        <input type="email" id="correo-registro" name="correo-registro" required>
-      </div>
-      <div class="form-group">
-        <label for="usuario-registro">Usuario:</label>
-        <input type="text" id="usuario-registro" name="usuario-registro" required>
-      </div>
-      <div class="form-group">
-        <label for="contrasena-registro">Contraseña:</label>
-        <input type="password" id="contrasena-registro" name="contrasena-registro" required>
-      </div>
-      <input type="submit" value="Registrarse">
-    </form>
-  </div>
+                        <div class="bg-white shadow rounded">
+                            <div class="row">
+                                
+
+                                    <div class="form-left h-100 py-5 px-5">
+                                        
+                                        <form action= "adminCrearUsuario.php" method="post" class="row g-4">
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="text" id="apellido" name="apellido"
+                                                        class="form-control" placeholder="Ingrese su apellido" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="text" id="correo-registro" name="correo-registro"
+                                                        class="form-control" placeholder="Correo electronico" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i>
+                                                    </div>
+                                                    <input type="text" id="usuario-registro" name="usuario-registro"
+                                                        class="form-control" placeholder="Ingrese Username" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                    <input type="password" id="contrasena-registro"
+                                                        name="contrasena-registro" class="form-control"
+                                                        placeholder="Ingrese contraseña" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+
+                                                <button type="submit"
+                                                    class="btn btn-primary px-4 float-end mt-4">Registrar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+
+                                
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+  
 </body>
 
 </html>

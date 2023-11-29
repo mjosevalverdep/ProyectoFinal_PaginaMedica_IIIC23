@@ -28,19 +28,20 @@ if (isset($_POST['borrar_btn'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
- 
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Usuarios </title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/adminUsuarios.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Usuarios </title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
 </head>
 
+ 
 <body>
     <header>
         <nav>
@@ -48,23 +49,27 @@ if (isset($_POST['borrar_btn'])) {
                 <img src="images/logo.png" alt="ClinicaASA">
             </div>
             <ul class="menu">
-                <nav>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="citas.html">Agendar Citas</a></li>
-                    <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
-                    <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
-                    <li><a href="contactenos.html">Contacto</a></li>
-                </nav>
-            </ul>
+            <nav>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="citas.html">Agendar Citas</a></li>
+                <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
+                <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
+                <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
         </nav>
-    </header>
-    <div id="contenido">
+        </header>
+        
+        <section>
+        <div class="container">
+        <div class="row">
         <div class="admin-usuarios">
             <h1>Administración de usuarios</h1>
             <div>
                 <button onclick="location.href='adminCrearUsuario.php'">Agregar usuario </button>
             </div>
         </div>
+        
         <table class="admin-table">
             <tr>
                 <th>Nombre</th>
@@ -101,8 +106,15 @@ if (isset($_POST['borrar_btn'])) {
             <?php }
             } ?>
         </table>
-    </div>
-</body>
+    </div>    
+</div>
 
+        </div>
+        </section>
+
+  <footer>
+    <p>&copy; 2023 Citas Médicas</p>
+  </footer>
+</body>
 
 </html>
