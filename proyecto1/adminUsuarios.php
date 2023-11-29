@@ -29,28 +29,35 @@ if (isset($_POST['borrar_btn'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Usuarios </title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="adminUsuarios.css">
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/adminUsuarios.css">
 </head>
 
 <body>
     <header>
-        <h1>Citas Médicas</h1>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="ClinicaASA">
+            </div>
+            <ul class="menu">
+                <nav>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="citas.html">Agendar Citas</a></li>
+                    <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
+                    <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
+                    <li><a href="contactenos.html">Contacto</a></li>
+                </nav>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="ReservaCitas.html">Citas Disponibles</a></li>
-            <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
-            <li><a href="contactenos.html">Contacto</a></li>
-        </ul>
-    </nav>
     <div id="contenido">
         <div class="admin-usuarios">
             <h1>Administración de usuarios</h1>
