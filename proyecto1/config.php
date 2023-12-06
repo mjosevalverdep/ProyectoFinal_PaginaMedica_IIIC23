@@ -3,4 +3,4 @@ $servidor = "localhost";
 $usuario = "Proyecto";
 $contrasena = "Proyecto";
 $base_de_datos = "usuarios";
-$puerto = 3307;
+$puerto = 3306;
