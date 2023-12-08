@@ -14,18 +14,8 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="ClinicaASA">
+            <div class="logo text-center">
             </div>
-            <ul class="menu">
-                <nav>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="citas.html">Agendar Citas</a></li>
-                <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
-                <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
-                <li><a href="contactenos.html">Contacto</a></li>
-            </ul>
-        </nav>
         </nav>
     </header>
 
@@ -34,47 +24,41 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
-                        <h3 class="mb-3">Inicio de sesion</h3>
+                        <h3 class="mb-3">Inicio de sesión</h3>
                         <div class="bg-white shadow rounded">
                             <div class="row">
                                 <div class="col-md-7 pe-0">
                                     <div class="form-left h-100 py-5 px-5">
                                         <form action="" class="row g-4">
                                             <div class="col-12">
-                                                <label>Username<span class="text-danger">*</span></label>
+                                                <label>Usuario<span class="text-danger">*</span></label>
                                                 <div class="input-group">
-                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Ingrese Username">
+                                                    <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                    <input type="text" class="form-control" placeholder="Ingrese Usuario">
                                                 </div>
                                             </div>
-
                                             <div class="col-12">
-                                                <label>Password<span class="text-danger">*</span></label>
+                                                <label>Contraseña<span class="text-danger">*</span></label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
-                                                    <input type="password" class="form-control"
-                                                        placeholder="Ingrese Password">
+                                                    <input type="password" class="form-control" placeholder="Ingrese Contraseña">
                                                 </div>
+                                                <small><a href="olvido_contrasena.html" class="text-decoration-none">¿Olvidó su contraseña?</a></small>
                                             </div>
-                                            <div class="col-12">
-                                                <button type="submit"
-                                                    class="btn btn-primary px-4 float-end mt-4">Ingresar</button>
+                                            <div class="col-12 mt-4 d-flex justify-content-end">
+                                                <a href="crear_cuenta.html" class="btn btn-primary px-4 me-3">Crear cuenta</a>
+                                                <button type="submit" class="btn btn-primary px-4">Ingresar</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-md-5 ps-0 d-none d-md-block">
                                     <div class="form-right h-100 bg-primary text-white text-center pt-5">
-                                        <h2 class="fs-1">Bienvenido</h2>
-                                        <p> Inicia sesion con tus datos de usuario, si no tienes una cuenta haz click en
-                                            el enlace de abajo para craerla</p>
-                                        <a  class="btn btn-dark" href="crear_cuenta.html" role="button">Crear cuenta </a>                                        </button>
+                                        <h2 class="fs-1">¡Bienvenid@!</h2>
+                                        <p style="font-size: 14px;">Programa tus citas con profesionales capacitados para garantizar tu bienestar.</p>
                                         <div class="logo">
                                             <img src="images/logo.png" alt="ClinicaASA">
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -83,9 +67,7 @@
                 </div>
             </div>
         </div>
-
     </section>
-
 
     <section id="redes-sociales" class="bg-dark p-4">
         <h2 class="text-center mb-4">Síganos en las Redes Sociales</h2>
@@ -114,7 +96,7 @@
             </ul>
         </div>
     </section>
-    </div>
+
     <footer>
         <p>&copy; 2023 Citas Médicas</p>
     </footer>
