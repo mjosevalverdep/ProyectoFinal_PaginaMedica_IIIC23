@@ -23,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica si la contraseña cumple con ciertos criterios (ejemplo: al menos 8 caracteres)
     if (strlen($contrasena) < 8) {
-        die("La contraseña debe tener al menos 8 caracteres.");
+        echo "<script>alert('La contraseña debe tener al menos 8 caracteres.');</script>";
+        echo "<script>setTimeout(function(){window.location.href='loginUsuarios.html';},3000);</script>";
     }
 
     // Hashing de la contraseña
@@ -35,12 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Registro exitoso
-        $mensaje = "¡Registro exitoso!";
-        // Redireccionamiento a login.html después de 3 segundos
-        header("refresh:3;url=loginUsuarios.html");
+        echo "<script>alert('¡Registro exitoso!');</script>";
+        echo "<script>setTimeout(function(){window.location.href='loginUsuarios.html';},3000);</script>";
     } else {
         // Error en el registro
-        $mensaje = "Error en el registro: " . $stmt->error;
+        echo "<script>alert('Error en el registro: " . $stmt->error . "');</script>";
     }
     $stmt->close();
 }
@@ -51,3 +51,4 @@ if (!empty($mensaje)) { ?>
     </p>
 <?php } 
 ?>
+ 
