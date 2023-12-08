@@ -1,5 +1,6 @@
 
 Script para creación de la base de datos en http://localhost/phpmyadmin/index.php?route=/ : 
+
 CREATE DATABASE IF NOT EXISTS usuarios;
 
 USE usuarios;
@@ -24,3 +25,5 @@ CREATE TABLE IF NOT EXISTS citas (
     hora_preferida TIME NOT NULL,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+Esto es una prueba
