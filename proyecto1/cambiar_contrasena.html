@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña - ClinicaASuAlcance</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="mb-3">Cambiar Contraseña</h3>
+                            <form action="actualizar_contrasena.php" method="POST" class="row g-3">
+                                <input type="hidden" name="correo" value="<?php echo $_POST['correo']; ?>">
+                                <div class="col-12">
+                                    <label for="nueva_contrasena" class="form-label">Nueva Contraseña<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                        <input type="password" id="nueva_contrasena" name="nueva_contrasena" class="form-control" placeholder="Ingrese su nueva contraseña" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary px-4">Actualizar Contraseña</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
