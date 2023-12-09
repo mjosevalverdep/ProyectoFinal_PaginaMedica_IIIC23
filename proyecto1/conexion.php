@@ -1,13 +1,13 @@
 <?php
 $servidor = "localhost";
-$usuario = "Proyecto"; 
-$contrasena = "Proyecto"; 
-$base_de_datos = "usuarios"; 
+$usuario = "Proyecto";
+$contrasena = "Proyecto";
+$base_de_datos = "usuarios";
 
 // Conexión a la base de datos
 $conexion = new mysqli($servidor, $usuario, $contrasena, $base_de_datos);
 
-// Verificar conexión
+// Verifica conexión
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
@@ -23,7 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica si la contraseña cumple con ciertos criterios (ejemplo: al menos 8 caracteres)
     if (strlen($contrasena) < 8) {
-        die("La contraseña debe tener al menos 8 caracteres.");
+        echo '<script>alert("La contraseña debe tener al menos 8 caracteres.");</script>';
+        echo '<script>window.location.href = "crear_cuenta.html";</script>';
+        exit(); 
     }
 
     // Hashing de la contraseña
@@ -35,9 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Registro exitoso
-        $mensaje = "¡Registro exitoso!";
+        echo '<script>alert("¡Registro exitoso!");</script>';
         // Redireccionamiento a login.html después de 3 segundos
-        header("refresh:3;url=loginUsuarios.html");
+        echo '<script>setTimeout(function(){ window.location.href = "loginUsuarios.html"; }, 3000);</script>';
     } else {
         // Error en el registro
         $mensaje = "Error en el registro: " . $stmt->error;
@@ -49,5 +51,5 @@ if (!empty($mensaje)) { ?>
     <p>
         <?php echo $mensaje; ?>
     </p>
-<?php } 
+<?php }
 ?>
