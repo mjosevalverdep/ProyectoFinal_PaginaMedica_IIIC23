@@ -25,5 +25,3 @@ CREATE TABLE IF NOT EXISTS citas (
     hora_preferida TIME NOT NULL,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-Esto es una prueba

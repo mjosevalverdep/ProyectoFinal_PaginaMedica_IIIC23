@@ -29,19 +29,19 @@
                             <div class="row">
                                 <div class="col-md-7 pe-0">
                                     <div class="form-left h-100 py-5 px-5">
-                                        <form action="" class="row g-4">
+                                        <form action="validarLogin.php" method="POST" class="row g-4">
                                             <div class="col-12">
                                                 <label>Usuario<span class="text-danger">*</span></label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
-                                                    <input type="text" class="form-control" placeholder="Ingrese Usuario">
+                                                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingrese Usuario" required>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <label>Contraseña<span class="text-danger">*</span></label>
                                                 <div class="input-group">
                                                     <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
-                                                    <input type="password" class="form-control" placeholder="Ingrese Contraseña">
+                                                    <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Ingrese Contraseña" required>
                                                 </div>
                                                 <small><a href="olvido_contrasena.html" class="text-decoration-none">¿Olvidó su contraseña?</a></small>
                                             </div>
