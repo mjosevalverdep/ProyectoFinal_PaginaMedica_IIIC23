@@ -4,40 +4,47 @@ $username = "Proyecto";
 $password = "Proyecto";
 $dbname = "usuarios";
 
-// Crea la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifica la conexión
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $correo = $_POST["correo"] ?? '';
-    $correo = $_POST["correo"];
-    $nueva_contrasena = $_POST["nueva_contrasena"];
-
-    // Hash de la nueva contraseña
-    $hashed_password = password_hash($nueva_contrasena, PASSWORD_DEFAULT);
-
-    // Actualiza la contraseña en la base de datos usando una consulta preparada
-    $sql = "UPDATE usuarios SET contraseña = ? WHERE correo = ?";
-
-    // Prepara la consulta
-    $stmt = $conn->prepare($sql);
-
-    // Vincula los parámetros y ejecuta la consulta
-    $stmt->bind_param("ss", $hashed_password, $correo);
-
-    if ($stmt->execute()) {
-        // Contraseña actualizada con éxito
-        echo '<script>alert("Contraseña actualizada correctamente");</script>';
-        echo '<script>window.location.href = "loginUsuarios.html";</script>';
+    $correo = $_GET['correo']; 
+    $nueva_contrasena = $_POST['nueva_contrasena']; 
+    $confirmar_contrasena = $_POST['confirmar_contrasena']; 
+    if ($nueva_contrasena !== $confirmar_contrasena) {
+        // Las contraseñas no coinciden
+        echo '<script>alert("No coinciden las contraseñas ingresadas.");</script>';
+        // Redirecciona a la página de cambiar contraseña con el correo en GET
+        echo '<script>window.location.href = "cambiar_contrasena.php?correo=' . urlencode($correo) . '";</script>';
+        exit();
+    } elseif (strlen($nueva_contrasena) < 8) {
+        // La contraseña es menor a 8 caracteres
+        echo '<script>alert("La contraseña debe tener al menos 8 caracteres.");</script>';
+        // Redirecciona a la página de cambiar contraseña con el correo en GET
+        echo '<script>window.location.href = "cambiar_contrasena.php?correo=' . urlencode($correo) . '";</script>';
         exit();
     } else {
-        // Error al actualizar la contraseña
-        echo "Error al actualizar la contraseña: " . $conn->error;
+        // Contraseñas coinciden y tienen más de 8 caracteres, actualizar en la base de datos
+        $hashed_password = password_hash($nueva_contrasena, PASSWORD_DEFAULT);
+
+        $sql = "UPDATE usuarios SET contraseña = '$hashed_password' WHERE correo = '$correo'";
+        $result = $conn->query($sql);
+
+        if ($result) {
+            // Contraseña actualizada exitosamente
+            echo '<script>alert("Se ha cambiado la contraseña con éxito.");</script>';
+            echo '<script>window.location.href = "loginUsuarios.html";</script>';
+            exit();
+        } else {
+            // Error al cambiar la contraseña
+            echo '<script>alert("Hubo un error al cambiar la contraseña.");</script>';
+            // Redirecciona o maneja el error de alguna manera
+        }
     }
 }
+
 $conn->close();
 ?>

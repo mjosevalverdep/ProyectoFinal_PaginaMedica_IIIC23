@@ -1,5 +1,4 @@
 <?php
-// Realiza la conexión a la base de datos
 $servername = "localhost";
 $username = "Proyecto";
 $password = "Proyecto";
@@ -19,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        header("Location: cambiar_contrasena.html?correo=" . urlencode($correo));
+        header("Location: cambiar_contrasena.php?correo=" . urlencode($correo));
         exit();
     } else {
         // El correo no existe en la base de datos
