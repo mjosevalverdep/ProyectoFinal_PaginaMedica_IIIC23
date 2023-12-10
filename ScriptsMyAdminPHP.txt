@@ -25,3 +25,10 @@ CREATE TABLE IF NOT EXISTS citas (
     hora_preferida TIME NOT NULL,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS Consultas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255),
+    email VARCHAR(255),
+    mensaje TEXT
+);
