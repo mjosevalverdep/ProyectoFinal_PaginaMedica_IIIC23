@@ -78,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </nav>
   <br>
 
-  <!-- ... (otras partes del código) ... -->
 
   <div id="contenido">
     <?php

@@ -30,6 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Cerrar la conexión
     $conn->close();
 } else {
-    // Si no es una solicitud POST, redirigir o manejar de acuerdo a tu necesidad
+    // Si no es una solicitud POST
     echo json_encode(['success' => false, 'message' => 'Método de solicitud no permitido']);
 }

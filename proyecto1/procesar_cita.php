@@ -37,13 +37,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql->close();
     $conn->close();
 } else {
-    // Si no es una solicitud POST, redirigir o manejar de acuerdo a tu necesidad
+    // Si no es una solicitud POST
     echo json_encode(['success' => false, 'message' => 'Método de solicitud no permitido']);
 }
 
 // Función para validar y limpiar un campo
 function validarCampo($campo)
 {
-    // Puedes aplicar más validaciones según tus requisitos
+   
     return htmlspecialchars(trim($campo));
 }

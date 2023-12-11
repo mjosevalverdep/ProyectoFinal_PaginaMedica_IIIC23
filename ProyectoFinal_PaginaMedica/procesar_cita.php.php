@@ -1,7 +1,7 @@
 <?php
 // Verificar si se recibieron datos del formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Conectar a la base de datos (modifica las credenciales según tu configuración)
+    // Conectar a la base de datos 
     $servidor = "localhost";
     $usuario = "Proyecto"; 
     $contrasena = "Proyecto"; 
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Cerrar la conexión
     $conn->close();
 } else {
-    // Si no es una solicitud POST, redirigir o manejar de acuerdo a tu necesidad
+    // Si no es una solicitud POST
     echo json_encode(['success' => false, 'message' => 'Método de solicitud no permitido']);
 }
 ?>
