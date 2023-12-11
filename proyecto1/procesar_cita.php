@@ -1,13 +1,11 @@
 <?php
+
+include "config.php";
 // Verificar si se recibieron datos del formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Conectar a la base de datos (modifica las credenciales según tu configuración)
-    $servidor = "localhost";
-    $usuario = "Proyecto";
-    $contrasena = "Proyecto";
-    $base_de_datos = "usuarios";
 
-    $conn = new mysqli($servidor, $usuario, $contrasena, $base_de_datos);
+    $conn = new mysqli($servidor, $usuario, $contrasena, $base_de_datos, $puerto);
 
     // Verificar la conexión
     if ($conn->connect_error) {
@@ -49,4 +47,3 @@ function validarCampo($campo)
     // Puedes aplicar más validaciones según tus requisitos
     return htmlspecialchars(trim($campo));
 }
-?>

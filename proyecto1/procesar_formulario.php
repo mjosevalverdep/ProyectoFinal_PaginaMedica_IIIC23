@@ -1,11 +1,7 @@
 <?php
-$servidor = "localhost";
-$usuario = "Proyecto";
-$contrasena = "Proyecto";
-$base_de_datos = "usuarios";
-
+include "config.php";
 // Conectar a la base de datos
-$conn = new mysqli($servidor, $usuario, $contrasena, $base_de_datos);
+$conn = new mysqli($servidor, $usuario, $contrasena, $base_de_datos, $puerto);
 
 // Verificar la conexión
 if ($conn->connect_error) {
@@ -36,5 +32,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Cerrar la conexión a la base de datos
 $conn->close();
-?>
-

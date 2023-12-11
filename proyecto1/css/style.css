@@ -285,7 +285,25 @@ border-bottom-right-radius: 0.5rem;
   justify-content: space-between;
 }
 
+  .citas-usuarios {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
 .admin-usuarios div button {
+
+    display: inline-block;
+    background: linear-gradient(to right, #007BFF, #00A5FF);
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+.citas-usuarios div button {
 
     display: inline-block;
     background: linear-gradient(to right, #007BFF, #00A5FF);
@@ -299,6 +317,13 @@ border-bottom-right-radius: 0.5rem;
 }
 
 .admin-usuarios div button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #0056b3, #008ce6);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.citas-usuarios div button:hover {
     cursor: pointer;
     background: linear-gradient(to right, #0056b3, #008ce6);
     transform: scale(1.05);

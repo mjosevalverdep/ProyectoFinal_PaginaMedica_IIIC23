@@ -1,13 +1,9 @@
 <?php
+include "config.php";
 // Verificar si se recibieron datos del formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Conectar a la base de datos (modifica las credenciales según tu configuración)
-    $servidor = "localhost";
-    $usuario = "Proyecto"; 
-    $contrasena = "Proyecto"; 
-    $base_de_datos = "citas"; 
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servidor, $usuario, $contrasena, $base_de_datos, $puerto);
 
     // Verificar la conexión
     if ($conn->connect_error) {
@@ -37,4 +33,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Si no es una solicitud POST, redirigir o manejar de acuerdo a tu necesidad
     echo json_encode(['success' => false, 'message' => 'Método de solicitud no permitido']);
 }
-?>

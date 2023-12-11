@@ -1,11 +1,8 @@
 <?php
-$servidor = "localhost";
-$usuario = "Proyecto";
-$contrasena = "Proyecto";
-$base_de_datos = "usuarios";
+include("config.php");
 
 // Conexión a la base de datos
-$conexion = new mysqli($servidor, $usuario, $contrasena, $base_de_datos);
+$conexion = new mysqli($servidor, $usuario, $contrasena, $base_de_datos, $puerto);
 
 // Verifica conexión
 if ($conexion->connect_error) {
@@ -25,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (strlen($contrasena) < 8) {
         echo '<script>alert("La contraseña debe tener al menos 8 caracteres.");</script>';
         echo '<script>window.location.href = "crear_cuenta.html";</script>';
-        exit(); 
+        exit();
     }
 
     // Hashing de la contraseña
