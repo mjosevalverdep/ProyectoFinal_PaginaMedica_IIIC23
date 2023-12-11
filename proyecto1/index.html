@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClinicaASuAlcance</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-   <script src="js/script.js"></script>
-   <script src="js/bootstrap.bundle.min.js"></script>
-   
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
 </head>
- 
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="ClinicaASA">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+                <img src="images/logo.png" height="100" alt="Logo ClinicaASA" loading="lazy" />
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="citas.html">Agendar citas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ReservaCitas.html">Ver registro Citas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactenos.html">Contacto</a>
+                </li>
+            </ul>
+            <li>
+                <a class="nav-link" href="cerrar_sesion.php">Cerrar sesion</a>
+            </li>
             </div>
-            <ul class="menu">
-            <nav>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="citas.html">Agendar Citas</a></li>
-                <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
-                <li><a href="contactenos.html">Contacto</a></li>
-                <li><a href="cerrar_sesion.php">Cerrar Sesión</a></li>
-        </ul>
-    </nav>
-        </nav>
-    </header>
-    <div id="contenido">
-    <section class="slide">
-        <div class="slide-content">
-        <h1>Bienvenido a Clinica a su alcance</h1>
-        <p>Su salud es nuestra prioridad. En Clinica a su alcance, le ofrecemos un servicio de reserva de citas médicas rápido y sencillo. </p>
-        <a href="citas.html" class="btn-reservar">Reservar una Cita</a>
+          </div>
         </div>
-    </section>
-    <div class="titulo">
-    <h2>Médicos Reconocidos</h2>
-    <p>En nuestra clinica contamos con la atencion de reoncidos médicos del país </p>
-</div>
-    <section id="medicos-reconocidos">
-            
+      </nav>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="images/slide1.png" class="d-block w-100" alt="Hospital">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="images/slide2.png" class="d-block w-100" alt="Dermatología">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="images/slide3.png" class="d-block w-100" alt="Cardiología">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="images/slide4.png" class="d-block w-100" alt="Cardiología">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="images/slide5.png" class="d-block w-100" alt="Cardiología">
+                  </div>
+        <button class="carousel-control-prev" type="buttonn" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="buttonn" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <div id="contenido">
+        <section class="medico">
+            <div class="medico-content">
+                <h1>Bienvenido a Clinica a su alcance</h1>
+                <p>Su salud es nuestra prioridad. En Clinica a su alcance, le ofrecemos un servicio de reserva de citas
+                    médicas rápido y sencillo. </p>
+                <a href="citas.html" class="btn-reservar">Reservar una Cita</a>
+            </div>
+        </section>
+        <div class="titulo">
+            <h2>Médicos Reconocidos</h2>
+            <p>En nuestra clinica contamos con la atencion de reconcidos médicos del país </p>
+        </div>
+        <section id="medicos-reconocidos">
+
             <div class="medico">
 
                 <img src="images\DOC1.png" alt="Dr. Juan Pérez">
@@ -52,61 +99,66 @@
             <div class="medico">
                 <img src="images\DOC2.png" alt="Dr. Mario López">
                 <h3>Dr. Mario López</h3>
-                <p>Especialista </p>
+                <p>Especialista en Dermatologia</p>
             </div>
             <div class="medico">
                 <img src="images\DOC3.png" alt="Dr. Mario López">
-                <h3>Dra. Pedro Garcia</h3>
-                <p>Especialista en Dermatología</p>
+                <h3>Dr. Pedro Garcia</h3>
+                <p>Especialista en Ortopedia</p>
             </div>
             <div class="medico">
                 <img src="images\DOC4.png" alt="Dr. Mario López">
-                <h3>Dra. Jorge Ulate</h3>
-                <p>Especialista en </p>
+                <h3>Dr. Ricardo Garcia</h3>
+                <p>Especialista en Neurologia</p>
             </div>
         </section>
 
         <div class="titulo">
-    <h2>Donde estámos ubicados</h2>
-    <p>Nuestra clinica está ubicada en una ubicación privilegiada </p>
+            <h2>Donde estámos ubicados</h2>
+            <p>Nuestra clinica está ubicada en una ubicación privilegiada </p>
 
-</div>
-        <section id="mapa"> 
+        </div>
+        <section id="mapa">
             <div class="mapa-info">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d413.0909884346169!2d-84.0773434058866!3d9.933462568455964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1700710278551!5m2!1ses-419!2scr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<p>Estamos ubicados en el centro de San José,por lo que es de facil accesibilidad que usted acuda a nuestras instalaciones </p>
-</div></section>
-        
-<section id="redes-sociales" class="bg-dark p-4">
-    <h2 class="text-center mb-4">Síganos en las Redes Sociales</h2>
-    <div class="d-flex justify-content-center">
-        <ul class="list-inline">
-            <li class="list-inline-item mr-3">
-                <a href="https://www.facebook.com/" class="text-dark" target="_blank">
-                    <img src="images\face.png" alt="Facebook" class="img-fluid">
-                </a>
-            </li>
-            <li class="list-inline-item mr-3">
-                <a href="https://twitter.com/" class="text-dark" target="_blank">
-                    <img src="images\twit.png" alt="Twitter" class="img-fluid">
-                </a>
-            </li>
-            <li class="list-inline-item mr-3">
-                <a href="https://www.instagram.com/" class="text-dark" target="_blank">
-                    <img src="images\insta.png" alt="Instagram" class="img-fluid">
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://web.whatsapp.com/" class="text-dark" target="_blank">
-                    <img src="images\whats.png" alt="WhatsApp" class="img-fluid">
-                </a>
-            </li>
-        </ul>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d413.0909884346169!2d-84.0773434058866!3d9.933462568455964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1700710278551!5m2!1ses-419!2scr"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>Estamos ubicados en el centro de San José, por lo que es somos una opcion accesible para que nos visite </p>
+            </div>
+        </section>
+
+        <section id="redes-sociales" class="bg-dark p-4">
+            <h2 class="text-center mb-4">Síganos en las Redes Sociales</h2>
+            <div class="d-flex justify-content-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.facebook.com/" class="text-dark" target="_blank">
+                            <img src="images\face.png" alt="Facebook" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <a href="https://twitter.com/" class="text-dark" target="_blank">
+                            <img src="images\twit.png" alt="Twitter" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item mr-3">
+                        <a href="https://www.instagram.com/" class="text-dark" target="_blank">
+                            <img src="images\insta.png" alt="Instagram" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://web.whatsapp.com/" class="text-dark" target="_blank">
+                            <img src="images\whats.png" alt="WhatsApp" class="img-fluid">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <p>&copy; 2023 Citas Médicas</p>
+            </footer>
+        </section>
     </div>
-</section>
-    </div>
-    <footer>
-        <p>&copy; 2023 Citas Médicas</p>
-    </footer>
 </body>
+
 </html>

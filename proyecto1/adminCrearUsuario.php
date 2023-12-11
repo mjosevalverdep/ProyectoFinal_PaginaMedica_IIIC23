@@ -58,23 +58,34 @@ $conn->close();
 
  
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="ClinicaASA">
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand mt-2 mt-lg-0" href="index.html">
+                <img src="images/logo.png" height="100" alt="Logo ClinicaASA" loading="lazy" />
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="citas.html">Agendar citas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ReservaCitas.html">Ver registro Citas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactenos.html">Contacto</a>
+                </li>
+            </ul>
             </div>
-            <ul class="menu">
-            <nav>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="citas.html">Agendar Citas</a></li>
-                <li><a href="ReservaCitas.html">Ver registro Citas</a></li>
-                <li><a href="loginUsuarios.html">Mi Cuenta</a></li>
-                <li><a href="contactenos.html">Contacto</a></li>
-        </ul>
-    </nav>
-        </nav>
-        </header>
-        
+          </div>
+        </div>
+      </nav>
+      <br>
         <section>
         <div class="login-page bg-light">
             <div class="container">
